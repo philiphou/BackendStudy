@@ -34,7 +34,7 @@ fs.stat('../httpModule',(err,data)=>{
 //  删除有内容的目录：
 fs.readdir('./test',(err,data)=>{
     console.log(data)
-    // 此处是异步删除所有的文件
+    // 此处是异步删除所有的文件，必须异步删除完毕后才可以删除目录；
     data.forEach(item=>{
         fs.unlink(`./test/${item}`,err=>{console.log(err)})
     })
