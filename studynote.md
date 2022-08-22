@@ -6,4 +6,6 @@
     2. 中间件（middleware)是一个函数，它可以访问请求对象（req object) 和 响应对象 （res object) 以及web应用中处于请求响应循环流程中的中间件，一般命名为next的变量
     3. 中间件可以分为： 应用级别中间件，路由级中间件，错误处理中间件，内置中间件以及第三方中间件；
     4. 应用级中间件可以利用 app.use()方法绑定到app对象上，或者用 app.METHOD()，其中METHOD是需要处理的HTTP请求的方法：GET,POST,PUT等：
+    5. 托管静态文件： 利用 express.static 内置中间件，将静态文件所在的目录传递给 express.static中间件就可以提供静态资源访问了： 
+        app.use(express.static('public'))
        
